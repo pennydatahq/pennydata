@@ -1,0 +1,41 @@
+{
+  "name": "pennydata",
+  "version": "0.1.0",
+  "description": "Typed client for Penny Data: pay-per-call data APIs for AI agents, paid with x402 in USDC on Base. No API key or account.",
+  "license": "MIT",
+  "author": "Penny Data <hello@pennydatahq.com>",
+  "homepage": "https://pennydatahq.com/docs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pennydatahq/pennydata.git"
+  },
+  "bugs": {
+    "email": "hello@pennydatahq.com"
+  },
+  "keywords": ["x402", "ai-agents", "usdc", "base", "pay-per-call", "company-data", "api-client"],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@x402/evm": "^2.28.0",
+    "@x402/fetch": "^2.28.0"
+  },
+  "devDependencies": {
+    "typescript": "^5"
+  }
+}
